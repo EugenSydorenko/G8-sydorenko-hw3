@@ -184,18 +184,15 @@ console.log(modifiedStr);
 // #14
 
 let kilometers;
-let meters = 1.5;
+let meters = 2;
 const lastDigit = meters % 10;
 const lastTwoDigits = meters % 100;
 if (meters === 1000) {
     kilometers = meters / 1000;
     console.log(meters + ' метрів це ' + kilometers + ' кілометр');
-} else if (meters === 0 || meters === 1 || (lastTwoDigits >= 11 && lastTwoDigits <= 14)) {
+} else if (meters === 0 || meters === 1 || (lastTwoDigits > 11 && lastTwoDigits <= 14)) {
     kilometers = meters / 1000;
     console.log(meters + ' метрів це ' + kilometers + ' кілометрів');
-} else if (lastDigit >= 2 && lastDigit <= 4) {
-    kilometers = meters / 1000;
-    console.log(meters + ' метри це ' + kilometers + ' кілометри');
 } else {
     kilometers = meters / 1000;
     console.log(meters + ' метрів це ' + kilometers + ' кілометра');
